@@ -9,7 +9,8 @@ public class CreateSheep : MonoBehaviour
 
     public void SheepStart()
     {
-    Instantiate(Sheep); 
+        Instantiate(Sheep); 
+
     }
 
 
