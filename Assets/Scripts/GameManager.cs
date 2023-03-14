@@ -9,10 +9,10 @@ namespace ConaLuk
 {
     public class GameManager : MonoBehaviour
     {
-
-        public static int money = 0;
+        private static int money;
+        [SerializeField] private TMP_Text currencyText;
+        [SerializeField] private GameObject moneyTrigger;
         [SerializeField] private Canvas shopcanvas;
-        [SerializeField] private int i;
         [SerializeField] private Button upgradeOne;
         [SerializeField] private Button upgradeTwo;
         [SerializeField] private Button upgradeThree;
@@ -22,7 +22,7 @@ namespace ConaLuk
         public void Start()
 
         { 
-
+            money = 0;
             shopcanvas.enabled = false;
             upgradeOne.enabled = false;
             upgradeTwo.enabled = false;
@@ -43,8 +43,14 @@ namespace ConaLuk
             shopcanvas.enabled = false;
         }
 
+        public static void Money()
+        {
+            money++;
+        }
+
         public void Update()
         {
+            currencyText.SetText(money.ToString());
 
             if (money >= 10)
             {
@@ -66,7 +72,7 @@ namespace ConaLuk
                 upgradeFour.enabled = true;
             }
         }
-
+    
 
 
     }

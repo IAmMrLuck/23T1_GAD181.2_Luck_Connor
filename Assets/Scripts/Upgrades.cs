@@ -23,11 +23,14 @@ namespace ConaLuk
         public GameObject extraSheep;
         [SerializeField] private Button uOne;
         [SerializeField] private Button sheepButton;
+        [SerializeField] private Button uTwo;
         private bool upgradeOne = false;
+        private bool upgradeTwo = false;
 
-        private void Update()
+
+        private void Start()
         {
-
+            sheepButton.onClick.AddListener(OnClickSheepButton);
         }
 
         public void ExtraSheep()
@@ -45,6 +48,19 @@ namespace ConaLuk
             upgradeOne = true;
             // change the spritye to something else
         }
+
+        public void UpgradeTwo()
+        {
+            upgradeTwo = true;
+        }
+        private void OnClickSheepButton()
+        {
+            if(upgradeTwo == true)
+            sheepButton.interactable = false;
+            sheepButton.onClick.Invoke();
+            sheepButton.interactable = true;
+        }
+
 
 
 
