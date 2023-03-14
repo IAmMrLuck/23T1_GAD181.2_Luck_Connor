@@ -65,7 +65,7 @@ namespace ConaLuk
                 upgradeThree.enabled = true;
             }
 
-            if(money >= 9999)
+            if(money >= 1999)
             {
                 upgradeFour.enabled = true;
             }

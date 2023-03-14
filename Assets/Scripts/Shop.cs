@@ -36,13 +36,7 @@ namespace ConaLuk
             shopcanvas.enabled=false;
         }
 
-        public void Update()
-        {
-            if(money >= 10)
-            {
-                upgradeOne.enabled = true;
-            }
-        }
+
 
     }
 }
