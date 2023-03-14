@@ -222,7 +222,7 @@ RectTransform:
   - {fileID: 677707598}
   - {fileID: 1003916623}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -260,7 +260,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &96267244
 MonoBehaviour:
@@ -288,12 +288,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopcanvas: {fileID: 45149277}
-  money: 0
+  i: 0
   upgradeOne: {fileID: 1505335973}
   upgradeTwo: {fileID: 1712048074}
   upgradeThree: {fileID: 715031253}
   upgradeFour: {fileID: 677707599}
-  currencyText: {fileID: 609007452}
 --- !u!1 &100777411
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +523,7 @@ RectTransform:
   - {fileID: 609007451}
   - {fileID: 100777412}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -597,7 +596,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &445518972
 GameObject:
@@ -708,7 +707,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609007450
 GameObject:
@@ -1059,7 +1058,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &715031251
 GameObject:
@@ -1766,7 +1765,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 31.137, z: -44.476}
 --- !u!1 &1346200437
 GameObject:
@@ -2214,7 +2213,19 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 96267245}
         m_TargetAssemblyTypeName: ConaLuk.GameManager, Assembly-CSharp
-        m_MethodName: currencyCount
+        m_MethodName: CurrencyCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1900332257}
+        m_TargetAssemblyTypeName: ConaLuk.Upgrades, Assembly-CSharp
+        m_MethodName: ExtraSheep
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2345,7 +2356,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1505335974}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1900332257}
+        m_TargetAssemblyTypeName: ConaLuk.Upgrades, Assembly-CSharp
+        m_MethodName: UpgradeOne
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1505335974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2480,7 +2503,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1712048072
 GameObject:
@@ -3011,6 +3034,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878048490}
   m_CullTransparentMesh: 1
+--- !u!1 &1900332255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1900332256}
+  - component: {fileID: 1900332257}
+  m_Layer: 0
+  m_Name: Upgrade Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1900332256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900332255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3510504, y: 4.929062, z: 9.310577}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1900332257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900332255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097caf3d6f7ea76488a962ea9cb344d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  extraSheep: {fileID: 9217849979081738507, guid: b42bad3feebd2b940814886a9bd984c0, type: 3}
+  uOne: {fileID: 1505335973}
+  sheepButton: {fileID: 1499856279}
 --- !u!1 &2000276250
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,7 +3177,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2000276255
 MonoBehaviour:
@@ -3121,6 +3191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3624573dc043d43a616a13984b7995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 96267245}
+  currencyText: {fileID: 609007452}
 --- !u!1 &2138711314
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,5 +3288,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 29.786, z: 0}

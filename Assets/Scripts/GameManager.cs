@@ -4,28 +4,25 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 namespace ConaLuk
 {
-
-
     public class GameManager : MonoBehaviour
     {
 
+        public static int money = 0;
         [SerializeField] private Canvas shopcanvas;
-        [SerializeField] private int money;
+        [SerializeField] private int i;
         [SerializeField] private Button upgradeOne;
         [SerializeField] private Button upgradeTwo;
         [SerializeField] private Button upgradeThree;
         [SerializeField] private Button upgradeFour;
 
-        public static int clickCounter;
-        [SerializeField] private TMP_Text currencyText;
 
+        public void Start()
 
-        private void Start()
+        { 
 
-        {
-            clickCounter = 0;
             shopcanvas.enabled = false;
             upgradeOne.enabled = false;
             upgradeTwo.enabled = false;
@@ -34,11 +31,7 @@ namespace ConaLuk
 
         }
 
-        public void currencyCount()
-        {
-            clickCounter++;
-            currencyText.SetText(clickCounter.ToString());
-        }
+
 
         public void ShopOn()
         {
@@ -53,25 +46,28 @@ namespace ConaLuk
         public void Update()
         {
 
-            if (clickCounter >= 10)
+            if (money >= 10)
             {
                 upgradeOne.enabled = true;
             }
 
-            if(clickCounter >= 20)
+            if(money >= 20)
             {
                 upgradeTwo.enabled = true;
             }
 
-            if(clickCounter >= 100)
+            if(money >= 100)
             {
                 upgradeThree.enabled = true;
             }
 
-            if(clickCounter <= 1000)
+            if(money >= 1000)
             {
                 upgradeFour.enabled = true;
             }
         }
+
+
+
     }
 }
