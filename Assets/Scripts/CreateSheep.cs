@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class CreateSheep : MonoBehaviour
+namespace ConaLuk
 {
 
-    public GameObject Sheep;
-
-    public void SheepStart()
+    public class CreateSheep : MonoBehaviour
     {
-        Instantiate(Sheep); 
+
+        public GameObject Sheep;
+
+
+        public void SheepStart()
+        {
+            Instantiate(Sheep);
+            Sheep.transform.position = new Vector3(34, 0, -33);
+        }
 
     }
-
-
 }

@@ -17,5 +17,6 @@ namespace ConaLuk
             transform.position = Vector3.MoveTowards(transform.position, barn.transform.position, moveSpeed *Time.deltaTime);
             
         }
+
     }
 }

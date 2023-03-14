@@ -10,9 +10,10 @@ namespace ConaLuk
 
     public class CurrencyCounter : MonoBehaviour
     {
-
-        [SerializeField] private int clickCounter;
+        public static int clickCounter;
         [SerializeField] private TMP_Text currencyText;
+
+
 
         public void currencyCount()
         {
