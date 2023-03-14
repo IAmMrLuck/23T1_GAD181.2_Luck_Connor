@@ -31,8 +31,6 @@ namespace ConaLuk
 
         }
 
-
-
         public void ShopOn()
         {
             shopcanvas.enabled = true;
