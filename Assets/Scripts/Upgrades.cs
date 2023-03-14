@@ -24,6 +24,7 @@ namespace ConaLuk
         [SerializeField] private Button uOne;
         [SerializeField] private Button sheepButton;
         [SerializeField] private Button uTwo;
+        [SerializeField] private Material coolDude;
         private bool clickedOnce = false;
         private bool upgradeOne = false;
         private bool upgradeTwo = false;
@@ -34,6 +35,7 @@ namespace ConaLuk
 
         private void Start()
         {
+            
             sheepButton.onClick.AddListener(OnClickSheepButton);
             sheepButton.onClick.AddListener(SheepSplosion);
         }
@@ -59,6 +61,14 @@ namespace ConaLuk
                     sheepButton.interactable = true;
                     clickedOnce = false;
                 }
+            }
+        }
+
+        public void CoolDude()
+        {
+            if(upgradeThree == true)
+            {
+                extraSheep.GetComponent<Renderer>().material = coolDude;
             }
         }
 
