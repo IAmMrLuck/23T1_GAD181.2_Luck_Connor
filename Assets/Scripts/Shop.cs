@@ -19,11 +19,17 @@ namespace ConaLuk
         {
             shopcanvas.enabled = false;
             upgradeOne.enabled = false;
+            upgradeTwo.enabled = false;
+            upgradeThree.enabled = false;
+            upgradeFour.enabled = false;
+
         }
 
         public void ShopOn()
         {
             shopcanvas.enabled=true;
         }
+
+
     }
 }
