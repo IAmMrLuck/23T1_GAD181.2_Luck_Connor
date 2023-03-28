@@ -36,7 +36,5 @@ namespace ConaLuk
             shopcanvas.enabled=false;
         }
 
-
-
     }
 }

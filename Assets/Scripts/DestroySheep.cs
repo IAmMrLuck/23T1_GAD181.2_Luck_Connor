@@ -20,13 +20,6 @@ namespace ConaLuk
 
         }
 
-        private void Update()
-        {
-            if (gameObject.CompareTag("Sheep"))
-            {
-                
-                Destroy(gameObject);
-            }
-        }
+
     }
 }

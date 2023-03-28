@@ -85,21 +85,25 @@ namespace ConaLuk
         public void UpgradeOne()
         {
             upgradeOne = true;
+            GameManager.money -= 10;
         }
 
         public void UpgradeTwo()
         {
             upgradeTwo = true;
+            GameManager.money -= 20;
         }
 
         public void UpgradeThree()
         {
             upgradeThree = true;
+            GameManager.money -= 100;
         }
 
         public void UpgradeFour()
         {
             upgradeFour = true;
+            GameManager.money -= 1999;
         }
     }
 }

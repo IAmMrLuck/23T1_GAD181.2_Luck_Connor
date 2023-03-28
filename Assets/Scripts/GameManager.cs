@@ -9,7 +9,7 @@ namespace ConaLuk
 {
     public class GameManager : MonoBehaviour
     {
-        private static int money;
+        public static int money;
         [SerializeField] private TMP_Text currencyText;
         [SerializeField] private GameObject moneyTrigger;
         [SerializeField] private Canvas shopcanvas;
@@ -53,19 +53,22 @@ namespace ConaLuk
             if (money >= 10)
             {
                 upgradeOne.enabled = true;
+ 
             }
 
             if(money >= 20)
             {
                 upgradeTwo.enabled = true;
+ 
             }
 
             if(money >= 100)
             {
                 upgradeThree.enabled = true;
+
             }
 
-            if(money >= 1999)
+            if(money >= 19)
             {
                 upgradeFour.enabled = true;
             }
